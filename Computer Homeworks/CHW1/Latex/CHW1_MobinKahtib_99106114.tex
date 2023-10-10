@@ -1,0 +1,65 @@
+\documentclass{article}
+%\documentclass[12pt]{article}
+\renewcommand{\baselinestretch}{1.4}
+\usepackage{amsthm,amssymb,amsmath,graphicx}
+\usepackage{color}
+\usepackage[top=2cm, bottom=2cm, left=2.5cm, right=3cm]{geometry}
+\usepackage[pagebackref=false,colorlinks,linkcolor=blue,citecolor=magenta]{hyperref}
+\usepackage{xepersian}
+\usepackage[euler]{textgreek}
+\usepackage{graphicx}
+\settextfont[Scale=1]{B Nazanin}
+\graphicspath{ {./images/} }
+\begin{document}
+%1.1
+\includegraphics{question1.jpg}\\\\
+\includegraphics{figure1.jpg}\\\\
+%1.2
+\includegraphics{question2.jpg}\\\\\\
+$y(t) - \alpha\times y(t - T_0) - \beta\times y(t - 2\times T_0) = x(t)$\\\\
+$\mathcal{F}y(t) - \alpha\times\mathcal{F}y(t - T_0) - \beta\times \mathcal{F}y(t - 2\times T_0)= \mathcal{F}x(t)$\\\\
+$Y(f)(1 - e^(-j2\pi fT_0)-e^(-j4\pi T_0)) = X(f)$\\\\ 
+$H_c(f) = \frac{1}{ (1 - \alpha e^(-j2\pi fT_0)-\beta e^(-j4\pi f T_0))}$ \\\\
+%1.3
+\includegraphics{question3.jpg}\\\\
+\includegraphics{figure3.jpg}\\\\
+%1.4
+\includegraphics{question4.jpg}\\\\
+\includegraphics{figure4.jpg}\\\\
+%1.5
+\includegraphics{question5.jpg}\\\\
+\begin{latin}
+Here, if we have an analysis on the transformation function, we will see that by writing the Taylor expansions, the output includes
+It is infinite from the input with different shifts and gains.
+
+%2.1
+\includegraphics{question21.jpg}\\\\
+
+We replace  $\beta$ instead of $E[\beta]$ :
+$y(t) - \alpha\times y(t - T_0) - {E[\beta]}\times y(t - 2\times T_0) = x(t)$\\\\
+${E[\beta]} =  \sum_{n=1}^{\infty}  \beta* p_i(\beta)  = b_0 + b_1 + b_2 + ... + b_n$
+$H_c(f) = \frac{1}{ (1 - \alpha e^(-j2\pi fT_0)-{E[\beta]} e^(-j4\pi f T_0))}$ \\\\
+$H_c(f) = \frac{1}{ (1 - \alpha e^{-j2\pi fT_0}-(b_0 + b_1 + b_2 + ... + b_n) e^{-j4\pi f T_0})}$ \\\\
+$H_{eq}(f) = ke^{-j2\pi ft_0}  (1 - \alpha e^{-j2\pi fT_0}-(b_0 + b_1 + b_2 + ... + b_n) e^{-j4\pi f T_0})$\\\\
+$H_{eq}(f) = ke^{-j2\pi ft_0}  (1 - \alpha e^{-j2\pi fT_0}-b_0 e^{-j4\pi f T_0} - b_1e^{-j4\pi f T_0} - b_2 e^{-j4\pi f T_0} - ... - b_n e^{-j4\pi f T_0})$\\\\
+Now we can say that   $e^{-j2\pi f T_0}$ for $\alpha$ and $e^{-j4\pi f T_0}$ for ${E[\beta]}$ are our delays which are created for different coefficients in each stage\\\\
+%2.2
+\includegraphics{question22.jpg}\\\\
+$\gamma = 0.3$\\\\
+$y(t) =  x(t) + \gamma x(t - T_0)$\\\\
+$Y(f) = (1 + \gamma e^{-j2\pi fT_0})X(f)$\\\\ 
+$H_c(f) = (1 + \gamma e^{-j2\pi fT_0})$\\\\
+$H_{eq}(f) = \frac{ke^{-j2\pi ft_0}} {(1 + \gamma e^{-j2\pi fT_0})}$\\\\
+$H_{eq}(f)=ke^{-j2 \pi ft_0}(\sum_{i=0}^{n} (−0.3)^i e^{ −j2\pi fT_0})$\\\\
+Now with multiply Y(f) on both sides and get inverse fourier transform:\\\\
+$x(t)=k\sum_{i=0}^{n} (-0.3)^iy(t - ( t_0+ iT_0))$\\\\
+And therefore The size of the coefficients are:
+1 , 0.3 ,0.09, 0.027,0.0081 ,0.00243,0.000729,0.0002187,etc\\\\
+\end{latin}
+%1.3
+\includegraphics{question23.jpg}\\\\
+\includegraphics{figure23.jpg}\\\\
+%1.4
+\includegraphics{question24.jpg}\\\\
+\includegraphics{figure24.jpg}\\\\
+\end{document}
